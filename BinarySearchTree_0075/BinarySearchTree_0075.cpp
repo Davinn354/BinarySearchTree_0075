@@ -82,4 +82,18 @@ public:
         }
     }
 
+    void preorder(Node* ptr)
+    {
+        if (ROOT == NULL)
+        {
+            cout << "tree is empty" << endl;
+            return;
+        }
+        if (ptr != NULL)
+        {
+            cout << ptr->info << " "; //ROOT
+            preorder(ptr->leftchild); //LEFT
+            preorder(ptr->rightchild); // RIGHT
+        }
+    }
 };
